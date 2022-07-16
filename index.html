@@ -69,7 +69,6 @@
             </p>
             <p>
                 <code>sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386</code>
-
             </p>
         </article>
         <article>
@@ -77,7 +76,28 @@
                 <h3>3 - Configurando o Emulador Android</h3>
             </header>
             <p>
-                Em breve...
+                Uma das principais ferramentas do Android Studio é o emulador, com ele podemos simular um sistema Android rodando em nosso computador e assim fazer
+                testes em tempo real da aplicação que estamos desenvolvendo.
+            </p>
+            <p>
+                Para configurar o emulador primeiro vamos até a pasta onde foi descompactado o Android Studio, navegamos até a subpasta bin e executamos o arquivo studio.sh e, após algumas configurações iniciais ao estilo "next, next...finish",
+                teremos a plataforma aberta em nosso computador pronta para uso.
+            </p>
+            <p>
+                Na tela inicial podemos expandir <code>More Actions</code> e selecionar <code>Virtual Device Manager</code> para irmos direto a página de gerenciamento dos emuladores.
+            </p>
+            <p>
+                Clicando em <code>Create Device</code> temos acesso a tela Select Hardware onte temos uma série de configurações que darão origem a um dispositivo virtual, bastando criar um dispositivo com as características que mais lhe agrada e clicar em <code>Next</code>.
+            </p>
+            <p>
+                Na próxima etapa precisamos escolher a versão do sistema Android que nosso dispositivo virtual irá executar, aqui basta escolher a versão desejada, fazer o download e clicar em <code>Next</code>. 
+            </p>
+            <p>
+                Na última etapa basta revisar as configurações e clicar em <code>Finish</code> para concluir a criação do dispositivo virtual, ou AVD.
+                Agora que nosso aparelho aparece na lista basta dar um play e ele logo iniciará!
+            </p>
+            <p>
+                Vocẽ pode criar e testar vários dispositivos com várias versões do Android diferentes.
             </p>
         </article>
         <article>
@@ -85,7 +105,22 @@
                 <h3>4 - Configurando o Visual Studio Code</h3>
             </header>
             <p>
-                Em breve...
+                Como mencionado anteriormente, o Android Studio é uma IDE completa para a criação e testes de aplicações, sendo que à partir dela você já consegue desenvolver seus aplicativos, contudo o Visual Studio Code é um editor mais leve e prático, sendo assim preferido por muitos programadores.
+                Por isso mostrarei como instalar e configurar o Visual Studio Code, comumente conhecido como VS Code e configurá-lo para o desenvolvimento com Flutter e integração com o AVD do Android Studio.
+            </p>
+            <p>
+                Primeiro realizaremos o Download do pacote .deb para Linux na página oficial acessível em <a
+                target="_blank" href="https://code.visualstudio.com">code.visualstudio.com</a>. Após concluir o download basta clicar sobre o programa com o botão direito e abrir com o Instalador de Pacotes,
+                ou então abrir o terminal, navegar até a pasta e executar o comando de instalação <code>sudo dpkg -i [nome_do_pacote].deb</code> onde [nome_do_pacote] deverá ser substituído pelo nome do arquivo baixado.
+            </p>
+            <p>
+                Após instalado, basta pesquisar por ele no menu principal do sistema.
+            </p>
+            <p>
+                Após abrir o VS Code, para trabalhar com Flutter precisamos instalar a extensão do mesmo, pressionando Ctrl+Shift+X ou navegando até File/Preferences/Extensions.
+            </p>
+            <p>
+                No campo de pesquisa basta digitar Flutter e clicar em <code>Install</code>.
             </p>
         </article>
         <article>
@@ -93,8 +128,27 @@
                 <h3>5 - Primeiro Projeto</h3>
             </header>
             <p>
-                Em breve...
+                Agora que temos tudo pronto, criaremos nosso primeiro projeto, para isso basta navegar até View/CommandPalette ou então usar o atalho Ctrl+Shift+P para abrir a janela de comandos, nela pesquisar por Flutter e selecionar <code>Flutter: New Project</code>.               
             </p>
+            <p>
+                Como é a primeira vez que estamos executando este comando, o VS Code irá perguntar sobre o SDK do Flutter na janela abaixo: 
+            </p>
+            <p>
+                Basta clicar em <code>Locate SDK</code> e selecionar a pasta onde você descompactou o arquivo baixado no começo do tutorial:
+            </p>
+            <p>
+                Ao executar o <code>Flutter: New Project</code> o VS Code exibirá uma lista de tipos de projetos que você pode criar, selecione Application para criar uma aplicação
+            </p>
+            <p>
+                Em seguida selecione ou crie a pasta onde será salvo seu projeto. Dê um nome para seu projeto e aguarde a criação do mesmo.
+            </p>
+            <p>
+                Temos agora uma visão geral do projeto criado!
+            </p>
+            <p>
+                Ao pressionar F5 a IDE fará a execução do projeto padrão criado pelo Flutter.
+            </p>
+
         </article>
     </section>
 
