@@ -4,6 +4,8 @@
 <head>
     <meta charset=“utf-8” />
     <meta content=“width=device-width, initial-scale=1, maximum-scale=1” name=“viewport”>
+    <meta name="description" content="Aprenta a instalar o Android Studio e o Flutter no Ubuntu e derivados">
+    <meta name="keywords" content="ubuntu, flutter, android, studio, desenvolver, aplicativo">
     <title>Tutorial Instalação do Flutter no Ubuntu</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -14,202 +16,265 @@
 <body>
     <header>
 
+        <div class="container">
 
+            <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Tutorial</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="https://github.com/leandro-mandu">/leandro-mandu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/leandro-mandu">Github</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="https://www.linkedin.com/in/leandro-mandu-1a4b30114/">Linkedin</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Outros Tutoriais
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item"
+                                            href="https://leandro-mandu.github.io/tutorial_laradock_ubuntu/">Laradock no
+                                            Ubuntu</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">leandro-mandu</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    </header>
 
-
-            </header>
+    <div class="container">
+        <div class="row" style="margin-top: 5rem !important;">
 
             <section>
-        <article>
-            <header>
-                <h2>Tutorial Instalação do Flutter no Ubuntu</h2>
-            </header>
-            <p>O Flutter é um framework que permite de forma ágil o desenvolvimento de aplicações multiplataforma,
-                tendo como alvos principais, porém não unicamente, os sistemas Android e IOS.
-            </p>
-            <p>Utiliza a linguagem Dart e proporciona que um unico código escrito gere aplicações capazes de rodar em
-                mais de uma plataforma evitando assim desperdício de tempo na escrita de instruções idênticas para mais
-                de um SO.
-            </p>
-            <p>Neste tutorial utilizaremos o Linux pois a maioria expressiva dos tutoriais disponíveis na internet sobre
-                esse tema
-                contempla a instalação no Windows, porém existem muitos programadores que, assim como eu, utilizam linux
-                durante o desenvolvimento de seus projetos.
-            </p>
-            <p>Estarei utilizando o Linux Mint, porém este tutorial se aplica a varias outras distribuições também
-                derivadas do Ubuntu, assim como para o próprio.</p>
-        </article>
+                <article>
+                    <header>
+                        <h2>Tutorial Instalação do Flutter no Ubuntu</h2>
+                    </header>
+                    <p>O Flutter é um framework que permite de forma ágil o desenvolvimento de aplicações
+                        multiplataforma,
+                        tendo como alvos principais, porém não unicamente, os sistemas Android e IOS.
+                    </p>
+                    <p>Utiliza a linguagem Dart e proporciona que um único código escrito gere aplicações capazes de
+                        rodar em
+                        mais de uma plataforma evitando assim desperdício de tempo na escrita de instruções idênticas
+                        para mais
+                        de um SO.
+                    </p>
+                    <p>Neste tutorial utilizaremos o linux pois a maioria expressiva dos tutoriais disponíveis na
+                        internet sobre
+                        esse tema
+                        contempla a instalação no Windows, porém existem muitos programadores que, assim como eu,
+                        utilizam linux
+                        durante o desenvolvimento de seus projetos.
+                    </p>
+                    <p>Estarei utilizando o Linux Mint, porém este tutorial se aplica a varias outras distribuições
+                        também
+                        derivadas do Ubuntu, assim como para o próprio.</p>
+                </article>
 
-        <article>
-            <header>
-                <h3>1 - Instalando o Flutter</h3>
-            </header>
-            <p>A instalação do Flutter é fácil no Linux, primeiro iremos até o site do projeto disponível em <a
-                    target="_blank" href="https://flutter.dev">flutter.dev</a>
-                e faremos o download da versão para Linux.</p>
-            <p> 
-                Basicamente a instalação se resume a baixar e descompactar o pacote, de preferência em uma pasta de fácil acesso. Após a descompactação uma pasta flutter será criada contendo o framework.
-            </p>
-        </article>
-        <article>
-            <header>
-                <h3>2 - Instalando o Android Studio</h3>
-            </header>
-            <p>
-                O Android Studio é a IDE oficial de desenvolvimento para Android, ela traz um conjunto de ferramentas para que você crie, compile e teste seus projetos de maneira simples.
-                Para baixar o Android Studio navegamos até sua página oficial disponível em <a
-                target="_blank" href="https://developer.android.com/studio">developer.android.com/studio</a> e faremos o download da versão para Linux.
-            </p>
-            <p>
-                O Android Studio para Linux, assim como o Flutter, vem em um arquivo compactado, basta descompactá-lo em um local de sua preferência.
-                 Enquanto o pacote é baixado, caso você utilize um sistema de 64 bits, é preciso instalar algumas bibliotecas necessárias para que o Android Studio funcione corretamente.
-                 Para isso basta abrir o terminal e executar o seguinte comando:
-            </p>
-            <p>
-                <code>sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386</code>
-            </p>
-        </article>
-        <article>
-            <header>
-                <h3>3 - Configurando o Emulador Android</h3>
-            </header>
-            <p>
-                Uma das principais ferramentas do Android Studio é o emulador, com ele podemos simular um sistema Android rodando em nosso computador e assim fazer
-                testes em tempo real da aplicação que estamos desenvolvendo.
-            </p>
-            <p>
-                Para configurar o emulador primeiro vamos até a pasta onde foi descompactado o Android Studio, navegamos até a subpasta bin e executamos o arquivo studio.sh e, após algumas configurações iniciais ao estilo "next, next...finish",
-                teremos a plataforma aberta em nosso computador pronta para uso.
-                <img src="imgs/run_studio_sh.png" class="img-fluid" alt="Executar o arquivo studio.sh para abrir o Android Studio">
-                <img src="imgs/open_studio.png" class="img-fluid" alt="Como abrir o Android Studio no Linux Mint">
-            </p>
-            <p>
-                Na tela inicial podemos expandir <code>More Actions</code> e selecionar <code>Virtual Device Manager</code> para irmos direto a página de gerenciamento dos emuladores.
-                <img src="imgs/manager_1.png" class="img-fluid" alt="Android Studio - Acessar AVD Manager">
-            </p>
-            <p>
-                Clicando em <code>Create Device</code> temos acesso a tela Select Hardware onte temos uma série de configurações que darão origem a um dispositivo virtual, bastando criar um dispositivo com as características que mais lhe agrada e clicar em <code>Next</code>.
-                <img src="imgs/manager_2.png" class="img-fluid" alt="Android Studio - Create Device">
-                <img src="imgs/select_h.png" class="img-fluid" alt="Android Studio - Create Device - Seleção de hardware">
-            </p>
-            <p>
-                Na próxima etapa precisamos escolher a versão do sistema Android que nosso dispositivo virtual irá executar, aqui basta escolher a versão desejada, fazer o download e clicar em <code>Next</code>. 
-                <img src="imgs/image_sel_1.png" class="img-fluid" alt="Android Studio - Create Device - Seleção de software">
-                <img src="imgs/image_sel_3.png" class="img-fluid" alt="Android Studio - Create Device - Seleção de software">
-            </p>
-            <p>
-                Na última etapa basta revisar as configurações e clicar em <code>Finish</code> para concluir a criação do dispositivo virtual, ou AVD.
-                Agora que nosso aparelho aparece na lista basta dar um play e ele logo iniciará!
-                <img src="imgs/avd_2.png" class="img-fluid" alt="Dispositivo virtual criado">
-                <img src="imgs/avd_3.png" class="img-fluid" alt="Dispositivo virtual em execução">
-            </p>
-            <p>
-                Vocẽ pode criar e testar vários dispositivos com várias versões do Android diferentes.
-                <img src="imgs/varios.png" class="img-fluid" alt="Crie quantos dispositivos virtuais quiser">
-            </p>
-        </article>
-        <article>
-            <header>
-                <h3>4 - Configurando o Visual Studio Code</h3>
-            </header>
-            <p>
-                Como mencionado anteriormente, o Android Studio é uma IDE completa para a criação e testes de aplicações, sendo que à partir dela você já consegue desenvolver seus aplicativos, contudo o Visual Studio Code é um editor mais leve e prático, sendo assim preferido por muitos programadores.
-                Por isso mostrarei como instalar e configurar o Visual Studio Code, comumente conhecido como VS Code e configurá-lo para o desenvolvimento com Flutter e integração com o AVD do Android Studio.
-            </p>
-            <p>
-                Primeiro realizaremos o Download do pacote .deb para Linux na página oficial acessível em <a
-                target="_blank" href="https://code.visualstudio.com">code.visualstudio.com</a>. Após concluir o download basta clicar sobre o programa com o botão direito e abrir com o Instalador de Pacotes,
-                ou então abrir o terminal, navegar até a pasta e executar o comando de instalação <code>sudo dpkg -i [nome_do_pacote].deb</code> onde [nome_do_pacote] deverá ser substituído pelo nome do arquivo baixado.
-                <img src="imgs/code_install.png" class="img-fluid" alt="Comando para instalar o Visual Studio Code no Linux">
-            </p>
-            <p>
-                Após instalado, basta pesquisar por ele no menu principal do sistema.
-                <img src="imgs/vs_2.png" class="img-fluid" alt="Visual Studio Code aparece na busca do menu iniciar do Linux">
-            </p>
-            <p>
-                Após abrir o VS Code, para trabalhar com Flutter precisamos instalar a extensão do mesmo, 
-                pressionando Ctrl+Shift+X ou navegando até File/Preferences/Extensions.
-                <img src="imgs/vs_extens.png" class="img-fluid" alt="Visual Studio Code como incluir extensões">
-            </p>
-            <p>
-                No campo de pesquisa basta digitar Flutter e clicar em <code>Install</code>.
-                <img src="imgs/vs_flutter_install.png" class="img-fluid" alt="Visual Studio Code como incluir extensão Flutter">
-            </p>
-        </article>
-        <article>
-            <header>
-                <h3>5 - Primeiro Projeto</h3>
-            </header>
-            <p>
-                Agora que temos tudo pronto, criaremos nosso primeiro projeto, para isso basta navegar até View/CommandPalette ou então usar o atalho Ctrl+Shift+P para abrir a janela de comandos, 
-                nela pesquisar por Flutter e selecionar <code>Flutter: New Project</code>.               
-                <img src="imgs/flutter_new_p.png" class="img-fluid" alt="Como criar um projeto Flutter no Visual Studio Code">
-            </p>
-            <p>
-                Como é a primeira vez que estamos executando este comando, o VS Code irá perguntar sobre o SDK do Flutter na janela abaixo: 
-                <img src="imgs/vs_code_sdk_flutter.png" class="img-fluid" alt="Como apontar SDK Flutter no Visual Studio Code">
-            </p>
-            <p>
-                Basta clicar em <code>Locate SDK</code> e selecionar a pasta onde você descompactou o arquivo baixado no começo do tutorial:
-                <img src="imgs/vscode_sdk_flutter_folder.png" class="img-fluid" alt="Como apontar pasta do SDK Flutter no Visual Studio Code">
-            </p>
-            <p>
-                Ao executar o <code>Flutter: New Project</code> o VS Code exibirá uma lista de tipos de projetos que você pode criar, selecione Application para criar uma aplicação
-                <img src="imgs/new_project_aplication.png" class="img-fluid" alt="Selecionar tipo de projeto Flutter no Visual Studio Code">
-            </p>
-            <p>
-                Em seguida selecione ou crie a pasta onde será salvo seu projeto. Dê um nome para seu projeto e aguarde a criação do mesmo.
-                <img src="imgs/project_folder.png" class="img-fluid" alt="Selecionar pasta do projeto Flutter no Visual Studio Code">
-                <img src="imgs/project_title.png" class="img-fluid" alt="Nomear projeto Flutter no Visual Studio Code">
-            </p>
-            <p>
-                Temos agora uma visão geral do projeto criado!
-                <img src="imgs/visao_geral_projeto.png" class="img-fluid" alt="Visão geral do projeto Flutter no Visual Studio Code">
-            </p>
-            <p>
-                Ao pressionar F5 a IDE fará a execução do projeto padrão criado pelo Flutter.
-                <img src="imgs/compiled.png" class="img-fluid" alt="Projeto Flutter compilado rodando no emulador Android">
-            </p>
+                <article>
+                    <header>
+                        <h3>1 - Instalando o Flutter</h3>
+                    </header>
+                    <p>A instalação do Flutter é fácil no Linux, primeiro iremos até o site do projeto disponível em <a
+                            target="_blank" href="https://flutter.dev">flutter.dev</a>
+                        e faremos o download da versão para Linux.</p>
+                    <p>
+                        Basicamente a instalação se resume a baixar e descompactar o pacote, de preferência em uma pasta
+                        de fácil acesso. Após a descompactação uma pasta flutter será criada contendo o framework.
+                    </p>
+                </article>
+                <article>
+                    <header>
+                        <h3>2 - Instalando o Android Studio</h3>
+                    </header>
+                    <p>
+                        O Android Studio é a IDE oficial de desenvolvimento para Android, ela traz um conjunto de
+                        ferramentas para que você crie, compile e teste seus projetos de maneira simples.
+                        Para baixar o Android Studio navegamos até sua página oficial disponível em <a target="_blank"
+                            href="https://developer.android.com/studio">developer.android.com/studio</a> e faremos o
+                        download da versão para Linux.
+                    </p>
+                    <p>
+                        O Android Studio para Linux, assim como o Flutter, vem em um arquivo compactado, basta
+                        descompactá-lo em um local de sua preferência.
+                        Enquanto o pacote é baixado, caso você utilize um sistema de 64 bits, é preciso instalar algumas
+                        bibliotecas necessárias para que o Android Studio funcione corretamente.
+                        Para isso basta abrir o terminal e executar o seguinte comando:
+                    </p>
+                    <p>
+                        <code>sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386</code>
+                    </p>
+                </article>
+                <article>
+                    <header>
+                        <h3>3 - Configurando o Emulador Android</h3>
+                    </header>
+                    <p>
+                        Uma das principais ferramentas do Android Studio é o emulador, com ele podemos simular um
+                        sistema Android rodando em nosso computador e assim fazer
+                        testes em tempo real da aplicação que estamos desenvolvendo.
+                    </p>
+                    <p>
+                        Para configurar o emulador primeiro vamos até a pasta onde foi descompactado o Android Studio,
+                        navegamos até a subpasta bin e executamos o arquivo studio.sh e, após algumas configurações
+                        iniciais ao estilo "next, next...finish",
+                        teremos a plataforma aberta em nosso computador pronta para uso.
+                    </p>
+                    <img src="imgs/run_studio_sh.png" class="img-thumbnail"
+                        alt="Executar o arquivo studio.sh para abrir o Android Studio">
+                    <img src="imgs/open_studio.png" class="img-thumbnail"
+                        alt="Como abrir o Android Studio no Linux Mint">
+                    <p>
+                        Na tela inicial podemos expandir <code>More Actions</code> e selecionar
+                        <code>Virtual Device Manager</code> para irmos direto a página de gerenciamento dos emuladores.
+                    </p>
+                    <img src="imgs/manager_1.png" class="img-thumbnail" alt="Android Studio - Acessar AVD Manager">
+                    <p>
+                        Clicando em <code>Create Device</code> temos acesso a tela Select Hardware onte temos uma série
+                        de configurações que darão origem a um dispositivo virtual, bastando criar um dispositivo com as
+                        características que mais lhe agrada e clicar em <code>Next</code>.
+                    </p>
+                    <img src="imgs/manager_2.png" class="img-thumbnail" alt="Android Studio - Create Device">
+                    <img src="imgs/select_h.png" class="img-thumbnail"
+                        alt="Android Studio - Create Device - Seleção de hardware">
+                    <p>
+                        Na próxima etapa precisamos escolher a versão do sistema Android que nosso dispositivo virtual
+                        irá executar, aqui basta escolher a versão desejada, fazer o download e clicar em
+                        <code>Next</code>.
+                    </p>
+                    <img src="imgs/image_sel_1.png" class="img-thumbnail"
+                        alt="Android Studio - Create Device - Seleção de software">
+                    <img src="imgs/image_sel_3.png" class="img-thumbnail"
+                        alt="Android Studio - Create Device - Seleção de software">
+                    <p>
+                        Na última etapa basta revisar as configurações e clicar em <code>Finish</code> para concluir a
+                        criação do dispositivo virtual, ou AVD.
+                        Agora que nosso aparelho aparece na lista basta dar um play e ele logo iniciará!
+                    </p>
+                    <img src="imgs/avd_2.png" class="img-thumbnail" alt="Dispositivo virtual criado">
+                    <img src="imgs/avd_3.png" class="img-thumbnail" alt="Dispositivo virtual em execução">
+                    <p>
+                        Vocẽ pode criar e testar vários dispositivos com várias versões do Android diferentes.
+                    </p>
+                    <img src="imgs/varios.png" class="img-thumbnail" alt="Crie quantos dispositivos virtuais quiser">
+                </article>
+                <article>
+                    <header>
+                        <h3>4 - Configurando o Visual Studio Code</h3>
+                    </header>
+                    <p>
+                        Como mencionado anteriormente, o Android Studio é uma IDE completa para a criação e testes de
+                        aplicações, sendo que à partir dela você já consegue desenvolver seus aplicativos, contudo o
+                        Visual Studio Code é um editor mais leve e prático, sendo assim preferido por muitos
+                        programadores.
+                        Por isso mostrarei como instalar e configurar o Visual Studio Code, comumente conhecido como VS
+                        Code e configurá-lo para o desenvolvimento com Flutter e integração com o AVD do Android Studio.
+                    </p>
+                    <p>
+                        Primeiro realizaremos o Download do pacote .deb para Linux na página oficial acessível em <a
+                            target="_blank" href="https://code.visualstudio.com">code.visualstudio.com</a>. Após
+                        concluir o download basta clicar sobre o programa com o botão direito e abrir com o Instalador
+                        de Pacotes,
+                        ou então abrir o terminal, navegar até a pasta e executar o comando de instalação
+                        <code>sudo dpkg -i [nome_do_pacote].deb</code> onde [nome_do_pacote] deverá ser substituído pelo
+                        nome do arquivo baixado.
+                    </p>
+                    <img src="imgs/code_install.png" class="img-thumbnail"
+                        alt="Comando para instalar o Visual Studio Code no Linux">
+                    <p>
+                        Após instalado, basta pesquisar por ele no menu principal do sistema.
+                    </p>
+                    <img src="imgs/vs_2.png" class="img-thumbnail"
+                        alt="Visual Studio Code aparece na busca do menu iniciar do Linux">
+                    <p>
+                        Após abrir o VS Code, para trabalhar com Flutter precisamos instalar a extensão do mesmo,
+                        pressionando Ctrl+Shift+X ou navegando até File/Preferences/Extensions.
+                    </p>
+                    <img src="imgs/vs_extens.png" class="img-thumbnail" alt="Visual Studio Code como incluir extensões">
+                    <p>
+                        No campo de pesquisa basta digitar Flutter e clicar em <code>Install</code>.
+                    </p>
+                    <img src="imgs/vs_flutter_install.png" class="img-thumbnail"
+                        alt="Visual Studio Code como incluir extensão Flutter">
+                </article>
+                <article>
+                    <header>
+                        <h3>5 - Primeiro Projeto</h3>
+                    </header>
+                    <p>
+                        Agora que temos tudo pronto, criaremos nosso primeiro projeto, para isso basta navegar até
+                        View/CommandPalette ou então usar o atalho Ctrl+Shift+P para abrir a janela de comandos,
+                        nela pesquisar por Flutter e selecionar <code>Flutter: New Project</code>.
+                    </p>
+                    <img src="imgs/flutter_new_p.png" class="img-thumbnail"
+                        alt="Como criar um projeto Flutter no Visual Studio Code">
+                    <p>
+                        Como é a primeira vez que estamos executando este comando, o VS Code irá perguntar sobre o SDK
+                        do Flutter na janela abaixo:
+                    </p>
+                    <img src="imgs/vs_code_sdk_flutter.png" class="img-thumbnail"
+                        alt="Como apontar SDK Flutter no Visual Studio Code">
+                    <p>
+                        Basta clicar em <code>Locate SDK</code> e selecionar a pasta onde você descompactou o arquivo
+                        baixado no começo do tutorial:
+                    </p>
+                    <img src="imgs/vscode_sdk_flutter_folder.png" class="img-thumbnail"
+                        alt="Como apontar pasta do SDK Flutter no Visual Studio Code">
+                    <p>
+                        Ao executar o <code>Flutter: New Project</code> o VS Code exibirá uma lista de tipos de projetos
+                        que você pode criar, selecione Application para criar uma aplicação
+                    </p>
+                    <img src="imgs/new_project_aplication.png" class="img-thumbnail"
+                        alt="Selecionar tipo de projeto Flutter no Visual Studio Code">
+                    <p>
+                        Em seguida selecione ou crie a pasta onde será salvo seu projeto. Dê um nome para seu projeto e
+                        aguarde a criação do mesmo.
+                    </p>
+                    <img src="imgs/project_folder.png" class="img-thumbnail"
+                        alt="Selecionar pasta do projeto Flutter no Visual Studio Code">
+                    <img src="imgs/project_title.png" class="img-thumbnail"
+                        alt="Nomear projeto Flutter no Visual Studio Code">
+                    <p>
+                        Temos agora uma visão geral do projeto criado!
+                    </p>
+                    <img src="imgs/visao_geral_projeto.png" class="img-thumbnail"
+                        alt="Visão geral do projeto Flutter no Visual Studio Code">
+                    <p>
+                        Ao pressionar F5 a IDE fará a execução do projeto padrão criado pelo Flutter.
+                    </p>
+                    <img src="imgs/compiled.png" class="img-thumbnail"
+                        alt="Projeto Flutter compilado rodando no emulador Android">
 
-        </article>
-    </section>
+                </article>
+            </section>
 
 
-    <footer>
-        <p>Julho de 2022</p>
-    </footer>
+
+            <footer>
+                <p>Julho de 2022</p>
+            </footer>
+
+        </div>
+        <!--/row-->
+    </div>
+    <!--/container-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
